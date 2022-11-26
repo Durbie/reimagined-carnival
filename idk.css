@@ -1,0 +1,69 @@
+body,
+html {
+  margin: 0 auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  max-width: 900px;
+}
+
+header {
+  border: black 1px solid;
+  border-top: none;
+  font-size: 14px;
+  margin: 0 auto;
+  position: relative;
+  background-color: darkred;
+  /*background: url();*/
+  padding-top: 72px;
+}
+
+.BannerText {
+  font-weight: bold;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+#BannerText1 {
+  position: absolute;
+  top: 48px;
+  left: 16px;
+}
+
+#BannerText2 {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+#BannerText3 {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+#BannerText4 {
+  position: absolute;
+  top: 48px;
+  right: 16px;
+}
+
+nav {
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 2em;
+  background-color: #6e99c9;
+  max-height: 37px;
+  color: white;
+  border-top: black 1px solid;
+  text-align: center;
+}
