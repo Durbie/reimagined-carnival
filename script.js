@@ -57,38 +57,13 @@ function readCookie(name) {
       while (c.charAt(0)==' ') c = c.substring(1,c.length);
       if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
-  return null;
-  }
+  if (c.indexOf(nameEQ) == 1)  
+alert("Replace this with 24 hour time script");
+}
   
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
 
-// when value is set, then do stuff
-
-
-function change(script){
-var value = readCookie;
-
-if (value == 1) {
-  setInterval2(function() {
-    var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    m=checkTime(m);
-    function checkTime(i) {
-      if (i<10) {
-        i="0" + i;
-      }
-      return i;
-    }
-    $(".dock-time").text(h+":"+m);
-  }, 1000);
-} else if (value == 0) {
-
-} 
-
-
-}
 
 
 
