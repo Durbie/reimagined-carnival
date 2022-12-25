@@ -68,7 +68,14 @@ function checkCookie() {
   }
 }
 
-function getCookie(name) {
+window.onload = function() {
+  var myDDIdx = readCookie("myDDIdx");
+  if (myDDIdx !== null) {
+    document.getElementById("options").selectedIndex = myDDIdx;
+  }
+};
+
+function readCookie(name) {
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
   for(var i=0;i < ca.length;i++) {
@@ -79,10 +86,11 @@ function getCookie(name) {
   return null;
 }
 
-checkCookie();
-  
-  
-  window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
+
+
+
+
+
 
 
 /* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)

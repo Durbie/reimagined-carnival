@@ -47,7 +47,7 @@ a:active{
   bottom: 0;
   border-top: 2px solid #efefef;
   padding: 3px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .dock-time {
@@ -129,68 +129,6 @@ a:active{
   font-weight: 100;
 }
 
-.start-menu hr {
-  margin: 0 4px 0 40px;
-}
-
-.start-menu ul {
-  margin: 0;
-  padding: 0;
-}
-
-.start-menu ul li {
-  padding: 18px 100px 18px 100px;
-  list-style: none;
-  background-repeat: no-repeat;
-  background-position: 48px center;
-  background-size: 33px;
-}
-
-.start-menu ul li.windows-update {
-  background-image: url(https://68.media.tumblr.com/f33cc852028056f5c3f41daa4ba007c3/tumblr_odq9qssnET1vgs7gco1_75sq.png);
-}
-
-.start-menu ul li.programs {
-  background-image: url(https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png);
-}
-
-.start-menu ul li.favorites {
-  background-image: url(https://66.media.tumblr.com/2d4a1593f0a13df6d507304708e11a7f/tumblr_odqaag4zd41vgs7gco1_75sq.png);
-}
-
-.start-menu ul li.documents {
-  background-image: url(https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png);
-}
-
-.start-menu ul li.settings {
-  background-image: url(https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png);
-}
-
-.start-menu ul li.find {
-  background-image: url(https://68.media.tumblr.com/d4f271116e0f67b79c64f2a1aac6488e/tumblr_odqaag4zd41vgs7gco8_75sq.png);
-}
-
-.start-menu ul li.help {
-  background-image: url(https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png);
-}
-
-.start-menu ul li.run {
-  background-image: url(https://66.media.tumblr.com/4ff9a932e9ba9b4736ddc63fae12b4fb/tumblr_odqay8HODs1vgs7gco1_75sq.png);
-}
-
-.start-menu ul li.log-off {
-  background-image: url(https://66.media.tumblr.com/1439f4d5c4bd20dcf6b98916a7cfb24e/tumblr_odqaag4zd41vgs7gco6_75sq.png);
-}
-
-.start-menu ul li.shut-down {
-  background-image: url(https://66.media.tumblr.com/1f29d811f6e2bb3f8fbe912057fc6e58/tumblr_odqaag4zd41vgs7gco10_75sq.png);
-}
-
-.start-menu ul li:hover {
-  background-color: #000184;
-  color: white;
-  cursor: pointer;
-}
 
 .window-container {
   text-align: center;
