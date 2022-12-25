@@ -46,7 +46,7 @@ if (window.sidebar) {
   document.onclick = reEnable
 }
 
-// selection
+// options cookie
 
 
 function readCookie(name) {
@@ -62,6 +62,34 @@ function readCookie(name) {
   
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
+
+// when value is set, then do stuff
+
+
+function change(script){
+var value = cookie.value;
+
+if (value == 1) {
+  setInterval(function() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    m=checkTime(m);
+    function checkTime(i) {
+      if (i<10) {
+        i="0" + i;
+      }
+      return i;
+    }
+    $(".dock-time").text(h+":"+m);
+  }, 1000);
+} else if (value == 0) {
+
+} 
+
+
+}
+
 
 
 /* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
