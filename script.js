@@ -36,15 +36,22 @@ if (window.sidebar) {
 
 
 function readCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  if (value === 1) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    alert("omg this might work");
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
   }
-  return null;
-  }
+}
+
+
+
+
   
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
