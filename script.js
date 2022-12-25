@@ -33,11 +33,16 @@ if (window.sidebar) {
 }
 
 // options cookie
-function readCookie(name, value) {
-  if (value === 1) {
-    alert("The value is 1!");
+
+function checkCookie() {
+  var myCookie = getCookie("myDDIdx");
+  if (myCookie == 1) {
+    alert("The value of mycookie is 1!");
   }
-  var nameEQ = myDDIdx + "=";
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
   var ca = document.cookie.split(';');
   for(var i=0;i < ca.length;i++) {
       var c = ca[i];
@@ -47,7 +52,7 @@ function readCookie(name, value) {
   return null;
 }
 
-
+checkCookie();
 
 
   
