@@ -16,6 +16,20 @@ setInterval(function() {
 );
 
 
+// Start menu
+$('.start-btn').on('onmousedown', function(e){
+   e.preventDefault();
+  $(this).toggleClass('active');
+  //$('.start-menu').toggleClass('open');
+});
+
+
+$('.start-btn').on('onmouseup', function(e){
+  e.preventDefault();
+  $(this).removeClass("active");
+  //$('.start-menu').toggleClass('open');
+});
+
 // disable selection
 function disableselect(e) {
   return false
@@ -32,12 +46,12 @@ if (window.sidebar) {
   document.onclick = reEnable
 }
 
-// options cookie
+// options
 
 function checkCookie() {
-  var myCookie = getCookie("myDDIdx");
-  if (myCookie == 1) {
-    alert("The value of mycookie is 1!");
+  var Chehe = getCookie("myDDIdx");
+  if (Chehe == 1) {
+    alert("The value of Chehe is 1!");
   }
 }
 
@@ -53,13 +67,9 @@ function getCookie(name) {
 }
 
 checkCookie();
-
-
   
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
-
-
 
 
 /* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
