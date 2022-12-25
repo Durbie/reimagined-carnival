@@ -70,7 +70,7 @@ function change(script){
 var value = cookie.value;
 
 if (value == 1) {
-  setInterval(function() {
+  setInterval2(function() {
     var today=new Date();
     var h=today.getHours();
     var m=today.getMinutes();
