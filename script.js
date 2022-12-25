@@ -55,21 +55,21 @@ $(".about").click(function() {
   $(".about").removeClass("focus").removeClass("border");
   $(this).addClass("focus").addClass("border");
 }).dblclick(function() {
-  location.href = 'about.html';
+  location.href = 'about';
 });
 
 $(".my-stuff").click(function() {
   $(".my-stuff").removeClass("focus").removeClass("border");
   $(this).addClass("focus").addClass("border");
 }).dblclick(function() {
-  location.href = 'kewl.html';
+  location.href = 'my-stuff';
 });
 
 $(".options").click(function() {
   $(".options").removeClass("focus").removeClass("border");
   $(this).addClass("focus").addClass("border");
 }).dblclick(function() {
-  location.href = "options.html"
+  location.href = "options"
 });
 
 function readCookie(name) {
@@ -86,49 +86,6 @@ function readCookie(name) {
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
 
-  function getCookie(myDDIdx) {
-    var dc = document.cookie;
-    var prefix = myDDIdx + "=myDDIdx";
-    var begin = dc.indexOf("; " + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-    }
-    else
-    {
-        begin += 2;
-        var end = document.cookie.indexOf(";", begin);
-        if (end == -1) {
-        end = dc.length;
-        }
-    }
-    // because unescape has been deprecated, replaced with decodeURI
-    //return unescape(dc.substring(begin + prefix.length, end));
-    return decodeURI(dc.substring(begin + prefix.length, end));
-} 
-
-function doSomething() {
-    var myCookie = getCookie("myDDIdx");
-
-    if (myCookie == 0) {
-        // do cookie doesn't exist stuff;
-    }
-    else {
-      setInterval(function() {
-        var today=new Date();
-        var h=today.getHours();
-        var m=today.getMinutes();
-        m=checkTime(m);
-        function checkTime(i) {
-          if (i<10) {
-            i="0" + i;
-          }
-          return i;
-        }
-        $(".dock-time").text(h+":"+m);
-      }, 1000);
-    }
-}
 
 /* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).

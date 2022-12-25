@@ -8,27 +8,25 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-
 
 
 </div>
-  <div class="desktop">
-    <div class="desktop-icons">
-      <div class="icon about">
-        <img src="./img/mypc.png" alt="" />
-        <p class="name">About</p>
-      </div>
-  
-      <div class="icon my-stuff">
-        <img src="./img/folder-stuff.png" alt="" />
-        <p class="name">My Stuff</p>
-      </div>
-  
-      <div class="icon options">
-        <img src="./img/panel.png" alt="" />
-        <p class="name">Options</p>
-      </div>
+<div class="desktop">
+  <div class="desktop-icons">
+    <div class="icon about">
+      <img src="../img/mypc.png" alt="" />
+      <p class="name">About</p>
+    </div>
+
+    <div class="icon my-stuff">
+      <img src="../img/folder-stuff.png" alt="" />
+      <p class="name">My Stuff</p>
+    </div>
+
+    <div class="icon options">
+      <img src="../img/panel.png" alt="" />
+      <p class="name">Options</p>
+    </div>
 
 
 
@@ -64,17 +62,15 @@
   <div class="window-container">
     <div class="window" style="max-width: 400px;">
       <div class="window-title">
-        Options
+        About
        <a href="/"> <div class="btn-close close"> X</div></a>
       </div>
       <div class="window-body">
-        <h1>Options</h1>
-        24 Hour Time <select id="options" onchange="document.cookie= 'myDDIdx = ' + this.selectedIndex + '; path=/;'; //window.open(this.options[this.selectedIndex].value,'_top')">
-          <option selected>Off (Default)</option>
-          <option>On</option>
-        </select>
+        <h1>About</h1>
         <div>
-          
+          <p>Project 98 started December 17, 2022</p>
+          <br>
+          <p>This project is about recreating the Windows 98 desktop, as a website template</p>
         </div>
       </div>
 
@@ -82,9 +78,10 @@
     </div>
 
   </div>
-
-  <script src='./libs/jQuery/lib1.min.js'></script>
-  <script src='./libs/jQuery/lib2.min.js'></script><script  src="./script.js"></script>
+  
+<!-- partial -->
+<script src='../libs/jQuery/lib1.min.js'></script>
+<script src='../libs/jQuery/lib2.min.js'></script><script  src="../script.js"></script>
 
 </body>
 </html>
