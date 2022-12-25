@@ -57,8 +57,10 @@ function readCookie(name) {
       while (c.charAt(0)==' ') c = c.substring(1,c.length);
       if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
-  if (c.indexOf(nameEQ) == 1)  
-alert("Replace this with 24 hour time script");
+  if (c.indexOf(nameEQ) == 1) {
+    alert("work generic crap")
+  }
+
 }
   
   
