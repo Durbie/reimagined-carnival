@@ -125,7 +125,7 @@ function doSomething() {
           }
           return i;
         }
-        $("#dock-time").text(h+":"+m);
+        $(".dock-time").text(h+":"+m);
       }, 1000);
     }
 }
