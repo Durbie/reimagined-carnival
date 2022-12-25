@@ -58,7 +58,7 @@ function readCookie(name) {
       if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
   if (c.indexOf(nameEQ) == 1) {
-    alert("work generic crap")
+    alert("work generic crap");
   }
 
 }
