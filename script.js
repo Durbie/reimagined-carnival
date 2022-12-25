@@ -51,7 +51,20 @@ if (window.sidebar) {
 function checkCookie() {
   var Chehe = getCookie("myDDIdx");
   if (Chehe == 1) {
-    alert("The value of Chehe is 1!");
+    setInterval(function() {
+      var today=new Date();
+      var h=today.getHours();
+      var m=today.getMinutes();
+      m=checkTime(m);
+      function checkTime(i) {
+        if (i<10) {
+          i="0" + i;
+        }
+        return i;
+      }
+      $(".dock-time").text(h+":"+m);
+    }, 1000);
+
   }
 }
 
