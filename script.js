@@ -70,8 +70,8 @@ function checkCookie() {
 
 window.onload = function() {
   var myDDIdx = readCookie("myDDIdx");
-  if (myDDIdx !== null) {
-    document.getElementById("options").selectedIndex = myDDIdx;
+  if (myDDIdx == 1) {
+    alert("The value of myDDIdx is 1!");
   }
 };
 
