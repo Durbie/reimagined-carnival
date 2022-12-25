@@ -16,20 +16,6 @@ setInterval(function() {
 );
 
 
-// Start menu
-$('.start-btn').on('onmousedown', function(e){
-   e.preventDefault();
-  $(this).toggleClass('active');
-  //$('.start-menu').toggleClass('open');
-});
-
-
-$('.start-btn').on('onmouseup', function(e){
-  e.preventDefault();
-  $(this).removeClass("active");
-  //$('.start-menu').toggleClass('open');
-});
-
 // disable selection
 function disableselect(e) {
   return false
@@ -60,16 +46,6 @@ function readCookie(name) {
   return null;
   }
   
-
-  function readCookie2(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 1)  alert("WORJ");
-    }
-  }
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
 
