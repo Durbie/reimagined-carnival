@@ -67,7 +67,7 @@ function readCookie(name) {
 
 
 function change(script){
-var value = cookie.value;
+var value = readCookie;
 
 if (value == 1) {
   setInterval2(function() {
