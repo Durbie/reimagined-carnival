@@ -2,6 +2,9 @@
 $('.window').draggable();
 //$('.icon').draggable();
 
+var firstX, firstY, down = false;
+
+
 setInterval(function() {
   var today=new Date();
   var h=today.getHours();
@@ -104,9 +107,18 @@ window.onload = function() {
 };
 
 
+setInterval(function() {
+  var today=new Date();
+  var h=today.getHours();
+  var m=today.getMinutes();
+  var ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12;
+  h = h ? h : 12; // the hour '0' should be '12'
+  m = m < 10 ? '0'+m : m;
 
-
-
+  $(".dock-time").text(h+":"+m+" "+ampm);
+}, 1000 //milliseconds
+);
 
 
 
