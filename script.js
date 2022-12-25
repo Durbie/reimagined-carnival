@@ -86,6 +86,50 @@ function readCookie(name) {
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
 
+  function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=myDDIdx";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+} 
+
+function doSomething() {
+    var myCookie = getCookie("myDDIdx");
+
+    if (myCookie == 0) {
+        // do cookie doesn't exist stuff;
+    }
+    else {
+      setInterval(function() {
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        m=checkTime(m);
+        function checkTime(i) {
+          if (i<10) {
+            i="0" + i;
+          }
+          return i;
+        }
+        $("#dock-time").text(h+":"+m);
+      }, 1000);
+    }
+}
+
 /* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
  *

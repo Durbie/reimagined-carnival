@@ -593,13 +593,6 @@ input[type="submit"]:disabled {
   border: 1px dotted white;
 }
 
-#selection {
-  position: absolute;
-  border: 1px dotted white;
-  background: #2C2C8E;
-  opacity: 0.8;
-}
-
 /* Options styles */
 
 
