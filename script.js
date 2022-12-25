@@ -79,10 +79,20 @@ function readCookie(name) {
       if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
   return null;
+}
+
+window.onload = function() {
+  var myDDIdx = readCookie("myDDIdx");
+  if (myDDIdx == 1) {
+    alert("The value of myDDIdx is 1!");
   }
-  
-  
-  window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
+  document.getElementById("options").selectedIndex = myDDIdx;
+};
+
+
+
+
+
 
 
 
