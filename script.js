@@ -84,7 +84,21 @@ function readCookie(name) {
 window.onload = function() {
   var myDDIdx = readCookie("myDDIdx");
   if (myDDIdx == 1) {
-    alert("The value of myDDIdx is 1!");
+    //alert("The value of myDDIdx is 1!");
+    setInterval(function() {
+      var today=new Date();
+      var h=today.getHours();
+      var m=today.getMinutes();
+      m=checkTime(m);
+      function checkTime(i) {
+        if (i<10) {
+          i="0" + i;
+        }
+        return i;
+      }
+      $(".dock-time").text(h+":"+m);
+    }, 1000);
+
   }
   document.getElementById("options").selectedIndex = myDDIdx;
 };
