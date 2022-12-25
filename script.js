@@ -86,9 +86,9 @@ function readCookie(name) {
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
 
-  function getCookie(name) {
+  function getCookie(myDDIdx) {
     var dc = document.cookie;
-    var prefix = name + "=myDDIdx";
+    var prefix = myDDIdx + "=myDDIdx";
     var begin = dc.indexOf("; " + prefix);
     if (begin == -1) {
         begin = dc.indexOf(prefix);
