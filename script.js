@@ -56,12 +56,12 @@ function readCookie(name) {
       var c = ca[i];
       while (c.charAt(0)==' ') c = c.substring(1,c.length);
       if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      else{
+        alert("WORK");
+      }
   }
-  if (c.indexOf(nameEQ) == 1) {
-    alert("work generic crap");
+  return null;
   }
-
-}
   
   
   window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
