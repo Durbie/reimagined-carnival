@@ -69,7 +69,7 @@
       </div>
       <div class="window-body">
         <h1>Options</h1>
-        24 Hour Time <select id="options">
+        24 Hour Time <select id="options" onchange="document.cookie= 'myDDIdx = ' + this.selectedIndex + '; path=/;'; //window.open(this.options[this.selectedIndex].value,'_top')">
           <option selected>Off (Default)</option>
           <option>On</option>
         </select>

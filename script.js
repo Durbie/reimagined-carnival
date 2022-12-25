@@ -72,16 +72,19 @@ $(".options").click(function() {
   location.href = "options.html"
 });
 
-document.cookie='options='+this.selectedIndex; 
-function setSavedValue() {
-  var theCookie=" "+document.cookie;
-  var ind=theCookie.indexOf(" options=");
-  if (ind==-1) ind=theCookie.indexOf(";options=");
-  if (ind==-1) return "";
-  var ind1=theCookie.indexOf(";",ind+1);
-  if (ind1==-1) ind1=theCookie.length; 
-  return unescape(theCookie.substring(ind+'options'.length+2,ind1));
-}
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+  }
+  
+  
+  window.onload = function () { document.getElementById("options").selectedIndex = readCookie("myDDIdx"); } 
 
 /* Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
