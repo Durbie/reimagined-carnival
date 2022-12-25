@@ -37,7 +37,7 @@ function readCookie(name, value) {
   if (value === 1) {
     alert("The value is 1!");
   }
-  var nameEQ = name + "=";
+  var nameEQ = myDDIdx + "=";
   var ca = document.cookie.split(';');
   for(var i=0;i < ca.length;i++) {
       var c = ca[i];
